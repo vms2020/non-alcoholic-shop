@@ -48,7 +48,7 @@ export function CartDrawer() {
     <div className={`fixed inset-0 z-50 ${isOpen ? '' : 'pointer-events-none'}`} aria-hidden={!isOpen} inert={!isOpen}>
       <div
         onClick={close}
-        className={`absolute inset-0 bg-ink/40 backdrop-blur-[2px] transition-opacity duration-300 ${
+        className={`absolute inset-0 bg-espresso/50 backdrop-blur-[2px] transition-opacity duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-0'
         }`}
       />

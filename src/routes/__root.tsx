@@ -3,6 +3,7 @@ import { CartProvider } from '@/lib/cart'
 import { SiteHeader } from '@/components/SiteHeader'
 import { SiteFooter } from '@/components/SiteFooter'
 import { CartDrawer } from '@/components/CartDrawer'
+import { themeInitScript } from '@/lib/theme'
 
 import '../styles.css'
 
@@ -58,8 +59,9 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <HeadContent />
       </head>
       <body>

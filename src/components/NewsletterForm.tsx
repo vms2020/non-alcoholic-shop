@@ -29,7 +29,7 @@ export function NewsletterForm() {
 
   if (state === 'success') {
     return (
-      <p role="status" className="mt-6 rounded-full bg-cream/10 px-5 py-3 text-sm inline-block">
+      <p role="status" className="mt-6 rounded-full bg-oat/10 px-5 py-3 text-sm inline-block">
         You're on the list — cheers! 🥂
       </p>
     )
@@ -55,7 +55,7 @@ export function NewsletterForm() {
           <input name="bot-field" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
-      <fieldset disabled={state === 'pending'} className="flex gap-2 rounded-full bg-cream/10 p-1.5 focus-within:ring-2 focus-within:ring-blush/60">
+      <fieldset disabled={state === 'pending'} className="flex gap-2 rounded-full bg-oat/10 p-1.5 focus-within:ring-2 focus-within:ring-petal/60">
         <label htmlFor="newsletter-email" className="sr-only">Email address</label>
         <input
           id="newsletter-email"
@@ -65,7 +65,7 @@ export function NewsletterForm() {
           maxLength={254}
           autoComplete="email"
           placeholder="you@example.com"
-          className="flex-1 min-w-0 bg-transparent px-4 text-sm placeholder:text-cream/40 outline-none"
+          className="flex-1 min-w-0 bg-transparent px-4 text-sm placeholder:text-oat/40 outline-none"
         />
         <button
           type="submit"
@@ -75,7 +75,7 @@ export function NewsletterForm() {
         </button>
       </fieldset>
       {state === 'error' && (
-        <p role="alert" className="mt-3 text-sm text-blush">
+        <p role="alert" className="mt-3 text-sm text-petal">
           We couldn't confirm your signup. Your email is still here — please try again in a moment.
         </p>
       )}
