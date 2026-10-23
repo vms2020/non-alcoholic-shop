@@ -1,5 +1,7 @@
 @import "tailwindcss" source("../");
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-cream: #f6efe4;
   --color-paper: #fbf7f0;
@@ -10,8 +12,27 @@
   --color-sage: #66735a;
   --color-blush: #efd3c4;
   --color-line: #e3d6c5;
+  /* Fixed tones for surfaces that stay dark in both themes (footer, announcement bar). */
+  --color-espresso: #2b1f1a;
+  --color-oat: #f6efe4;
+  --color-petal: #efd3c4;
   --font-display: "Fraunces", Georgia, serif;
   --font-sans: "Instrument Sans", system-ui, sans-serif;
+}
+
+/* Dark theme: same token names, evening palette. Toggled via `.dark` on <html>. */
+.dark {
+  color-scheme: dark;
+  --color-cream: #1a1411;
+  --color-paper: #241b17;
+  --color-ink: #f3e9dc;
+  --color-muted: #b09f91;
+  --color-clay: #e2774a;
+  --color-clay-dark: #c4552d;
+  --color-sage: #9fb08c;
+  --color-blush: #4a3128;
+  --color-line: #3a2d26;
+  --color-espresso: #120d0b;
 }
 
 html {
@@ -24,6 +45,7 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Soft paper grain on a fixed, non-interactive layer. */

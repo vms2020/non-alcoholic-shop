@@ -191,7 +191,7 @@ function CategoryTile({
     <Link
       to="/shop"
       search={{ category }}
-      className={`group relative overflow-hidden rounded-[2rem] ${tone} text-paper min-h-[22rem] flex`}
+      className={`group relative overflow-hidden rounded-[2rem] ${tone} text-oat min-h-[22rem] flex`}
     >
       <img
         src={imageUrl(image, 900)}
@@ -201,7 +201,7 @@ function CategoryTile({
       />
       <div className="relative p-8 md:p-10 mt-auto">
         <h3 className="font-display text-6xl md:text-7xl italic">{title}</h3>
-        <p className="mt-2 text-paper/80 max-w-[14rem]">{blurb}</p>
+        <p className="mt-2 text-oat/80 max-w-[14rem]">{blurb}</p>
         <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-paper text-ink px-5 py-2.5 text-sm font-semibold">
           Explore <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
         </span>
